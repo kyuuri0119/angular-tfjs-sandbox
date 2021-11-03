@@ -1,0 +1,12 @@
+<p>学習済みモデルtoxicityを使って有害なテキストの判別を行う</p>
+
+<ol>
+  <li>npm install @tensorflow/tfjs @tensorflow-models/toxicity</li>
+</ol>
+
+
+<h2>DEMO</h2>
+
+<input type="text" [(ngModel)]="toxicity_text">
+
+<p>{{toxicity_text | toxicity | async | json}}</p>
