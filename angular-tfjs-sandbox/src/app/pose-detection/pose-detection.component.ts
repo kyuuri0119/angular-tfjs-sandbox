@@ -150,7 +150,7 @@ export class PoseDetectionComponent implements OnInit, AfterViewInit {
     // If score is null, just show the keypoint.
     const score = keypoint.score != null ? keypoint.score : 1;
     // const scoreThreshold = params.STATE.modelConfig.scoreThreshold || 0;
-    const scoreThreshold = 0.1;
+    const scoreThreshold = 0.6;
 
     if (score >= scoreThreshold) {
       const circle = new Path2D();
