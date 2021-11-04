@@ -1224,6 +1224,11 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.7.0"
 
+"@mediapipe/pose@^0.5.1635988162":
+  version "0.5.1635988162"
+  resolved "https://registry.yarnpkg.com/@mediapipe/pose/-/pose-0.5.1635988162.tgz#905e626cb07bce86c692d8ec057f04558ddd26fe"
+  integrity sha512-t0dpl+iG/MTPtPPxEYHyVWo+X7G+qgYUYaB4y9pxavQRNzuQQeHeSmUnT+A8qOKnuB0ccxgyrrFmGUaaL0F3wQ==
+
 "@ngtools/webpack@12.2.12":
   version "12.2.12"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-12.2.12.tgz#5c0ef0d26ba332e4b52a1efb92fefe5b76863d26"

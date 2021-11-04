@@ -1,18 +1,29 @@
+<h2>pose-detection</h2>
+
+<h3>手順</h3>
+<ol>
+  <li>npm install @tensorflow/tfjs @tensorflow-models/pose-detection</li>
+  <li>model:pose-detectionの読み込み</li>
+  <li>modelから検出器の生成</li>
+  <li>画像の用意(webカメラから取得)</li>
+  <li>検出器に画像を渡して姿勢検出</li>
+  <li>canvasに描画</li>
+</ol>
+
 <div class="video-container" *ngIf="!error">
-	<video [class.show]="!isCaptured" [class.hide]="isCaptured" #video id="video" [width]="WIDTH" [height]="HEIGHT"
-		autoplay></video>
-	<canvas [class.show]="isCaptured" [class.hide]="!isCaptured" #canvas id="canvas" [width]="WIDTH"
+	<video [class.show]="false" [class.hide]="true" #video id="video" [width]="WIDTH" [height]="HEIGHT"
+		autoplay (loadeddata)="onLoadedData()"></video>
+	<canvas  #canvas id="canvas" [width]="WIDTH"
 		[height]="HEIGHT"></canvas>
+	<!-- <canvas [class.show]="isCaptured" [class.hide]="!isCaptured" #canvas id="canvas" [width]="WIDTH"
+		[height]="HEIGHT"></canvas> -->
 </div>
 
 <div class="snap-container">
-	<button class="btn btn-primary" *ngIf="!isCaptured" (click)="capture()">Snap Photo</button>
-	<button class="btn btn-danger" *ngIf="isCaptured" (click)="removeCurrent()">Take Another</button>
+	<!-- <button class="btn btn-primary" *ngIf="!isCaptured" (click)="capture()">Snap Photo</button>
+	<button class="btn btn-danger" *ngIf="isCaptured" (click)="removeCurrent()">Take Another</button> -->
 
 	<div *ngIf="error" class="text-danger mt-4">
-		{{ error }}. Please click refresh on stackblitz
-		<div class="mt-5">
-			<img src="https://trungk18.com/7e0976255739e721501803ee074f1f94/camera.gif" />
-		</div>
+		{{ error }}.
   </div>
 </div>
