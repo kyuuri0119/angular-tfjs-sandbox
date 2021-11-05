@@ -1,14 +1,24 @@
-<h2>pose-detection</h2>
+<h2>PoseDetection</h2>
+モデルPoseNetを使った画像中の人の姿勢推定。
 
-<h3>手順</h3>
+<h3>入力</h3>
+<p>画像</p>
+
+<h3>出力</h3>
+<p>人体のキーポイントの座標</p>
+<p><a href="https://github.com/tensorflow/tfjs-models/tree/master/pose-detection#keypoint-diagram" target="_blank" rel="noopener noreferrer">キーポイント詳細</a></p>
+
+
+<h3>実行手順</h3>
 <ol>
-  <li>npm install @tensorflow/tfjs @tensorflow-models/pose-detection</li>
-  <li>model:pose-detectionの読み込み</li>
-  <li>modelから検出器の生成</li>
-  <li>画像の用意(webカメラから取得)</li>
-  <li>検出器に画像を渡して姿勢検出</li>
-  <li>canvasに描画</li>
+  <li>yarn add @tensorflow/tfjs @tensorflow-models/pose-detection</li>
+  <li>pose-detectionよりモデルPoseNetの読み込み</li>
+  <li>画像の用意</li>
+  <li>モデルに画像を渡して姿勢検出</li>
+  <li>canvasに画像とキーポイントを描画</li>
 </ol>
+
+<h3>DEMO</h3>
 
 <div class="video-container" *ngIf="!error">
 	<video [class.show]="false" [class.hide]="true" #video id="video" [width]="WIDTH" [height]="HEIGHT"
@@ -27,3 +37,10 @@
 		{{ error }}.
   </div>
 </div>
+
+
+<h3>使い道</h3>
+<ul>
+  <li><a href="https://3d.kalidoface.com/" target="_blank" rel="noopener noreferrer">kalidoface</a></li>
+  <li>Twitterで<strong>#MadeWithTFJS</strong>を調べるといろんな人が作品を投稿してる</li>
+</ul>
